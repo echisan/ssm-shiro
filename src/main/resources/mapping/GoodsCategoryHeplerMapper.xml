@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.echisan.dao.helper.GoodsCategoryHelperMapper">
+
+    <resultMap id="goodCategoryResultMap" type="com.echisan.model.po.GoodsCategory">
+        <id property="id" column="id" jdbcType="BIGINT"/>
+        <result property="goodsId" column="goods_id" jdbcType="BIGINT"/>
+        <result property="categoryId" column="category_id" jdbcType="SMALLINT"/>
+    </resultMap>
+
+    <insert id="insertByBatch" parameterType="java.util.List">
+        INSERT INTO goods_category (goods_id, category_id)
+        VALUES
+        <foreach collection="list" item="item" index="index" separator=",">
+            (#{item.goodsId,jdbcType=BIGINT},#{item.categoryId,jdbcType=SMALLINT})
+        </foreach>
+    </insert>
+
+</mapper>
