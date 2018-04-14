@@ -10,5 +10,5 @@
 ![物品详情](https://github.com/echisan/ssm-shiro/blob/master/screenshot/3.png)
 ### 个人中心
 ![个人中心](https://github.com/echisan/ssm-shiro/blob/master/screenshot/4.png)
-### 用户管理
-![用户管理](https://github.com/echisan/ssm-shiro/blob/master/screenshot/5.png)
+### 管理中心-物品管理
+![管理中心-物品管理](https://github.com/echisan/ssm-shiro/blob/master/screenshot/5.png)
